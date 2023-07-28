@@ -11,10 +11,10 @@
       <% end %>
     </h2>
     <p><%= blog_post.content %></p>
-
   </div>
 <% end %>
 
-<% if user_signed_in? %>
+<div class="my-16">
+  <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+</div>
 
-<% end %>

@@ -8,3 +8,8 @@
 
 user = User.where(email: "sam@blog.com").first_or_initialize
 user.update!(password: "password", password_confirmation: "password")
+
+100.times do |i|
+  blog_post = BlogPost.where(title: "Post #{i}").first_or_initialize
+  blog_post.update(content: "Woop, there it is!", published_at: Time.current)
+end
